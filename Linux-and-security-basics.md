@@ -26,8 +26,9 @@ This is because sally does not have root access and is not root user
 
 ---
 
-## 5. Delete user earl
-![Deleting user earl](images/images/delete_user_earl.png)
+## 5. Create then Delete user earl
+![Creating user earl](images/images/sudoEarl.png)
+![Deleting user earl](images/images/byEarl.png)
 
 ---
 
