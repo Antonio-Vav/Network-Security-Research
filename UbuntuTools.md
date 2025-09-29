@@ -1,2 +1,0 @@
-# Crucial commands in Ubuntu
-
