@@ -66,12 +66,12 @@ Every command runs with full system privileges. A simple typo could destroy the 
 ![lab1 directory permissions](images/images/mkdir.png)
 Owner = vavallea    
 Group owner = vavallea  
-The owner and group have read and write and ececute perms  
+The owner and group have read and write and execute perms  
 Other has read and execute perms but no write
 
 ---
 
-## 12. Create helloWorld script
+## 12. Create helloWorld script, make it executable and run helloWorld script
 ![helloWorld bash script created](images/images/nano.png)
 ![helloWorld bash script executed](images/images/helloWorl.png)
 
