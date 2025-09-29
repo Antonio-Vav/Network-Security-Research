@@ -8,6 +8,6 @@ ___
 
 ## Table of Contents
 
-### 1: Ubuntu tools
+### 1: Linux tools using Ubuntu 
 - [Exploring useful Linux commands using Ubuntu](https://github.com/Antonio-Vav/Network-Security-Research/blob/main/Linux-and-security-basics.md)
 
