@@ -64,6 +64,10 @@ Every command runs with full system privileges. A simple typo could destroy the 
 
 ## 11. Create lab1 directory
 ![lab1 directory permissions](images/images/mkdir.png)
+Owner = vavallea    
+Group owner = vavallea  
+The owner and group have read and write and ececute perms  
+Other has read and execute perms but no write
 
 ---
 
@@ -75,10 +79,14 @@ Every command runs with full system privileges. A simple typo could destroy the 
 
 ## 13. Check and modify helloWorld permissions and view ACL of helloWorld
 ![helloWorld permissions updated](images/images/removeAdd.png)
+The permissions for this file are as follows:  
+owner: read, write and execute
+group: read, write and execute
+other: read and execute
 
 ---
 
-## 15. Give sally read & write access using setfacl
+## 14. Give sally read & write access using setfacl then check with getfacl
 ![Setting ACL for sally on helloWorld](images/images/setfacl.png)
 
 
