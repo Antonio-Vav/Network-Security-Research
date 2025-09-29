@@ -32,71 +32,53 @@ This is because sally does not have root access and is not root user
 
 ---
 
-## 6. Change sally’s password
-![Changing password for sally](images/images/passwd_sally.png)
+## 6. Change sally's password
+![Changing password for sally](images/images/psswdChang.png)
 
 ---
 
 ## 7. Why not stay logged in as root?
-![Explanation about root practice](images/images/root_bad_practice.png)
+Every command runs with full system privileges. A simple typo could destroy the whole system
 
 ---
 
 ## 8. Show user ID
-![Showing user ID](images/images/user_id.png)
+![Showing user ID](images/images/id.png)
 
 ---
 
 # Group Tasks
 
-## 9. Groups ubuntu belongs to
-![Groups ubuntu belongs to](images/images/ubuntu_groups.png)
+## 9. Give sally sudo access and use that access to create new user earl
+![Sally with sudo](images/images/specialSal.png)
+![Sally with sudo creating new user](images/images/earlHiAgain.png)
 
 ---
 
-## 10. Give sally sudo access
-![Sally with sudo creating new user](images/images/sally_sudo_useradd.png)
-
----
-
-## 11. Create cybersec group
-![Creating cybersec group](images/images/create_cybersec.png)
-
----
-
-## 12. Add sally to cybersec
-![Adding sally to cybersec group](images/images/add_sally_cybersec.png)
-
----
-
-## 13. Check sally’s groups
-![Checking sally’s groups](images/images/sally_groups.png)
+## 10. Create cybersec group, add sally to cybersec and check sally's groups
+![Creating cybersec group](images/images/groupCyber+sal.png)
 
 ---
 
 # Permissions and ACL Tasks
 
-## 14. Create lab1 directory
-![lab1 directory permissions](images/images/lab1_permissions.png)
+## 11. Create lab1 directory
+![lab1 directory permissions](images/images/mkdir.png)
 
 ---
 
-## 15. Create helloWorld script
-![helloWorld bash script created](images/images/helloWorld_script.png)
+## 12. Create helloWorld script
+![helloWorld bash script created](images/images/nano.png)
+![helloWorld bash script executed](images/images/helloWorl.png)
 
 ---
 
-## 16. Check and modify helloWorld permissions
-![helloWorld permissions updated](images/images/helloWorld_permissions.png)
+## 13. Check and modify helloWorld permissions and view ACL of helloWorld
+![helloWorld permissions updated](images/images/removeAdd.png)
 
 ---
 
-## 17. View ACL of helloWorld
-![Viewing ACL of helloWorld](images/images/helloWorld_acl.png)
-
----
-
-## 18. Give sally read & write access
-![Setting ACL for sally on helloWorld](images/images/sally_acl.png)
+## 15. Give sally read & write access using setfacl
+![Setting ACL for sally on helloWorld](images/images/setfacl.png)
 
 
