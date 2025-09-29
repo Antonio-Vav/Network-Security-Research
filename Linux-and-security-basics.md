@@ -80,8 +80,8 @@ Other has read and execute perms but no write
 ## 13. Check and modify helloWorld permissions and view ACL of helloWorld
 ![helloWorld permissions updated](images/images/removeAdd.png)
 The permissions for this file are as follows:  
-owner: read, write and execute
-group: read, write and execute
+owner: read, write and execute  
+group: read, write and execute  
 other: read and execute
 
 ---
