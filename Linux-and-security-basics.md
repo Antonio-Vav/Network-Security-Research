@@ -9,17 +9,20 @@
 ---
 
 ## 2. Create users bobby and sally
-![User creation outputs](images/images/user_creation.png)
+![User creation outputs](images/images/sallyBob.png)
+useradd = It just creates the user account with minimal defaults. It doesn't set up a password, home directory, or shell
+adduser = it asks for details like password, full name, and sets up the home directory automatically
 
 ---
 
 ## 3. Switch to sally
-![Prompt after switching to sally](images/images/sally_prompt.png)
+![Prompt after switching to sally](images/images/suSally.png)
 
 ---
 
 ## 4. Try creating a user as sally
-![Permission denied when sally creates a user](images/images/sally_useradd_fail.png)
+![Permission denied when sally creates a user](images/images/sallyNo.png)
+This is because sally does not have root access and is not root
 
 ---
 
