@@ -9,5 +9,5 @@ ___
 ## Table of Contents
 
 ### 1: Ubuntu tools
-- [Eploring useful Linux commands using Ububtu](https://github.com/Antonio-Vav/Network-Security-Research/blob/main/Linux-and-security-basics.md)
+- [Eploring useful Linux commands using Ubuntu](https://github.com/Antonio-Vav/Network-Security-Research/blob/main/Linux-and-security-basics.md)
 
