@@ -4,7 +4,7 @@
 # User Tasks
 
 ## 1. Switch to root
-![Prompt after switching to root](images/root.png)
+![Prompt after switching to root](images/images/root.png)
 
 ---
 
@@ -94,5 +94,6 @@
 
 ## 18. Give sally read & write access
 ![Setting ACL for sally on helloWorld](images/sally_acl.png)
+
 
 
