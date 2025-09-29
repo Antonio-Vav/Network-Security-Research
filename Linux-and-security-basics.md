@@ -10,7 +10,7 @@
 
 ## 2. Create users bobby and sally
 ![User creation outputs](images/images/sallyBob.png)
-useradd = It just creates the user account with minimal defaults. It doesn't set up a password, home directory, or shell
+useradd = It just creates the user account with minimal defaults. It doesn't set up a password, home directory, or shell  
 adduser = it asks for details like password, full name, and sets up the home directory automatically
 
 ---
@@ -22,7 +22,7 @@ adduser = it asks for details like password, full name, and sets up the home dir
 
 ## 4. Try creating a user as sally
 ![Permission denied when sally creates a user](images/images/sallyNo.png)
-This is because sally does not have root access and is not root
+This is because sally does not have root access and is not root user
 
 ---
 
