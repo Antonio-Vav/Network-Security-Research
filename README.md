@@ -12,6 +12,7 @@ ___
 - [Exploring useful Linux commands using Ubuntu](https://github.com/Antonio-Vav/Network-Security-Research/blob/main/Linux-and-security-basics.md)
 
 ### 2: Environment Variables & Set-UID Program Lab
-- [Environment Variables & Set-UID Program Lab — step-by-step guide and exercises]()
+- [Environment Variables & Set-UID Program Experiments](https://github.com/Antonio-Vav/Network-Security-Research/blob/main/Environment-Variables-Experimentation.md)
+
 
 
