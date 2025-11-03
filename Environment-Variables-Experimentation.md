@@ -7,7 +7,7 @@ This experiment shows how environment variables affect program and system behavi
 ## Task 1 – Manipulating Environment Variables
 ![Task 1 Screenshot](images/images/1.png)
 ![Task 1 Screenshot](images/images/1.2.png)
-I listed, created, exported, and removed environment variables using `printenv`, `export`, and `unset`. I confirmed that exported variables are visible in a child shell while unset variables are removed. This demonstrates how Bash handles variable inheritance and removal.
+I used printenv, env, 
 
 ---
 
