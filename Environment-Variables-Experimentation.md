@@ -7,7 +7,7 @@ This experiment shows how environment variables affect program and system behavi
 ## Task 1 – Manipulating Environment Variables
 ![Task 1 Screenshot](images/images/1.png)
 ![Task 1 Screenshot](images/images/1.2.png)
-I used printenv, env, 
+I used `printenv`, `env`, `export` and `unset` to list and create enviroment variables. I created MYVAR by using `export` and `echo $MYVAR` and removed it with `unset`.
 
 ---
 
