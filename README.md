@@ -11,3 +11,7 @@ ___
 ### 1: Linux tools using Ubuntu 
 - [Exploring useful Linux commands using Ubuntu](https://github.com/Antonio-Vav/Network-Security-Research/blob/main/Linux-and-security-basics.md)
 
+### 2: Environment Variables & Set-UID Program Lab
+- [Environment Variables & Set-UID Program Lab — step-by-step guide and exercises]()
+
+
