@@ -1,4 +1,4 @@
-# Environment Variables & Set-UID Program Lab
+# Environment Variables & Set-UID Program Experiment
 
 This experiment shows how environment variables affect program and system behavior, especially for privileged Set-UID programs. Every task below includes a brief description and a screenshot showing the commands/results.
 
