@@ -34,7 +34,14 @@ I executed `/usr/bin/env` from a small C program by dangerously using the system
 
 ## Task 5 –  Set-UID Programs and Enviroment Variables
 ![Task 5 Screenshot](images/images/5.png)  
-I inspected a Set-UID program that calls `system()` and observed its behavior when executed by a non-root user. The test shows why running shell-based commands from privileged code is risky: the environment and shell behavior can be influenced by the calling user. This task underscores the need to avoid `system()` in security-sensitive code.
+by creating a printing program named foo.c and using these commands:  
+`gcc foo.c -o foo
+sudo chown root:root foo
+sudo chmod 4755 foo`
+these commands allowed me to set privledges to foo and make it a set-UID, I then ran:  
+`./foo > foo_output.txt
+head -n 40 foo_output.txt`
+and expected some enviroment variables to be missing due to the set-UID process.
 
 ---
 
