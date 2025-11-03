@@ -19,20 +19,20 @@ I compiled and ran a small C program that forks and prints the environment in th
 
 ---
 
-## Task 3 – execve() with NULL vs environ
+## Task 3 – execve() & Enviroment Variables
 ![Task 3 NULL env Screenshot](images/images/3.png)  
 ![Task 3 environ Screenshot](images/images/3.1.png)  
 I ran a program calling `execve()` first with a `NULL` environment and then passing `environ`. The `NULL` run produced no environment output while the `environ` run printed the full environment list. This shows `execve()` only provides environment variables if they are explicitly passed.
 
 ---
 
-## Task 4 – system() Inherits Environment
+## Task 4 – system() & Enviroment Variables
 ![Task 4 Screenshot](images/images/4.png)  
 I executed `/usr/bin/env` from a small C program via `system()`, and the output matched the calling shell’s environment. This confirms `system()` invokes a shell (`/bin/sh -c ...`) and thus inherits the caller’s environment. It highlights why calling shell commands can propagate untrusted variables.
 
 ---
 
-## Task 5 – Using system() in Set-UID Programs
+## Task 5 –  Set-UID Programs and Enviroment Variables
 ![Task 5 Screenshot](images/images/5.png)  
 I inspected a Set-UID program that calls `system()` and observed its behavior when executed by a non-root user. The test shows why running shell-based commands from privileged code is risky: the environment and shell behavior can be influenced by the calling user. This task underscores the need to avoid `system()` in security-sensitive code.
 
@@ -50,20 +50,16 @@ I built a shared library to override a libc function and used `LD_PRELOAD` to in
 
 ---
 
-## Task 8 – Unsafe `system()` and PATH Interaction
+## Task 8 – system() vs execve()
 ![Task 8 Screenshot](images/images/8.png)  
 I compiled a Set-UID program that calls `system("cat ...")`, replaced `cat` with a malicious script via `PATH`, and observed the malicious script execute. The result demonstrates that `system()` trusts the environment unless it is explicitly cleared, so privileged code should avoid shell invocation or use absolute paths. This highlights an easy route to command hijacking in insecure programs.
 
 ---
 
-## Task 9 – Capability Leak (attempt & documentation)
+## Task 9 – Capability Leak
 ![Task 9 Screenshot — attempt / logs](images/images/9.png)   
 I implemented a capability-leak test intended to open `/etc/zzz` as root, drop privileges with `setuid(getuid())`, and then exec a shell that could still use the opened privileged file descriptor. Compilation/runtime issues (documented in the screenshots) prevented the interactive exploit from completing during this run, but the source, setup, and error logs were captured for reproducibility. This task illustrates how privileged file descriptors can leak capabilities and why careful cleanup is needed after privilege drops.
 
 ---
 
-## Brief summary
-These experiments demonstrate the mechanics of environment propagation (`fork` and `exec`), the differences between direct execution and shell invocation (`execve` vs `system`), and real-world pitfalls (PATH hijacking, LD_PRELOAD, and capability leaks) that make Set-UID programs particularly sensitive to untrusted environment data. Always run such labs in an isolated VM and use absolute paths or `execve()` for privileged code.
-
----
 
