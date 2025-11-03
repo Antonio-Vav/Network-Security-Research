@@ -6,22 +6,22 @@ This experiment shows how environment variables affect program and system behavi
 
 ## Task 1 – Manipulating Environment Variables
 ![Task 1 Screenshot](images/images/1.png)
-![Task 3 environ Screenshot](images/images/1.2.png)
+![Task 1 Screenshot](images/images/1.2.png)
 I listed, created, exported, and removed environment variables using `printenv`, `export`, and `unset`. I confirmed that exported variables are visible in a child shell while unset variables are removed. This demonstrates how Bash handles variable inheritance and removal.
 
 ---
 
 ## Task 2 – Parent and Child Environment
-![Task 2 Screenshot (child output)](images/images/2.png)  
-![Task 2 Screenshot (parent output)](images/images/2.2.png) 
-![Task 3 environ Screenshot](images/images/2.3.png)
+![Task 2 Screenshot)](images/images/2.png)  
+![Task 2 Screenshot](images/images/2.2.png) 
+![Task 2 Screenshot](images/images/2.3.png)
 I compiled and ran a small C program that forks and prints the environment in the child, then captured the parent environment separately. A `diff`/checksum comparison showed no differences, proving the child inherits the parent’s environment copy. This confirms environment propagation across `fork()`.
 
 ---
 
 ## Task 3 – execve() & Enviroment Variables
-![Task 3 NULL env Screenshot](images/images/3.png)  
-![Task 3 environ Screenshot](images/images/3.1.png)  
+![Task 3 Screenshot](images/images/3.png)  
+![Task 3 Screenshot](images/images/3.1.1.png)  
 I ran a program calling `execve()` first with a `NULL` environment and then passing `environ`. The `NULL` run produced no environment output while the `environ` run printed the full environment list. This shows `execve()` only provides environment variables if they are explicitly passed.
 
 ---
