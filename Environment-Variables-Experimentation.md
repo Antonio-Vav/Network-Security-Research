@@ -22,13 +22,13 @@ I compiled and ran a small C program that forks and prints the environment in th
 ## Task 3 – execve() & Enviroment Variables
 ![Task 3 Screenshot](images/images/3.png)  
 ![Task 3 Screenshot](images/images/3.1.1.png)  
-I ran a program calling `execve()` first with a `NULL` environment and then passing `environ`. The NULL run produced no environment output, but the `environ` run printed the full environment list. This shows `execve()` only provides environment variables if they are specifically passed.
+I ran a program calling `execve()` first with a NULL environment and then passing `environ`. The NULL run produced no environment output, but the `environ` run printed the full environment list. This shows `execve()` only provides environment variables if they are specifically passed.
 
 ---
 
 ## Task 4 – system() & Enviroment Variables
 ![Task 4 Screenshot](images/images/4.png)  
-I executed `/usr/bin/env` from a small C program via `system()`, and the output matched the calling shell’s environment. This confirms `system()` invokes a shell (`/bin/sh -c ...`) and thus inherits the caller’s environment. It highlights why calling shell commands can propagate untrusted variables.
+I executed `/usr/bin/env` from a small C program by dangerously using the system function and the output matched the calling shell’s environment. This confirms `system()` invokes a shell following the path and by doing so, inherits the caller’s environment. It highlights why calling shell commands using system can be risky.
 
 ---
 
