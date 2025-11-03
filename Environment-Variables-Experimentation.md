@@ -15,14 +15,14 @@ I used `printenv`, `env`, `export` and `unset` to list and create enviroment var
 ![Task 2 Screenshot)](images/images/2.png)  
 ![Task 2 Screenshot](images/images/2.2.png) 
 ![Task 2 Screenshot](images/images/2.3.png)
-I compiled and ran a small C program that forks and prints the environment in the child, then captured the parent environment separately. A `diff`/checksum comparison showed no differences, proving the child inherits the parent’s environment copy. This confirms environment propagation across `fork()`.
+I compiled and ran a small C program that forks and prints the environment in the child, then directed the parent environment separately. A `diff` comparison showed no differences This shows that the child inherits the parent’s environment copy. This confirms `fork()` functionallity.
 
 ---
 
 ## Task 3 – execve() & Enviroment Variables
 ![Task 3 Screenshot](images/images/3.png)  
 ![Task 3 Screenshot](images/images/3.1.1.png)  
-I ran a program calling `execve()` first with a `NULL` environment and then passing `environ`. The `NULL` run produced no environment output while the `environ` run printed the full environment list. This shows `execve()` only provides environment variables if they are explicitly passed.
+I ran a program calling `execve()` first with a `NULL` environment and then passing `environ`. The NULL run produced no environment output, but the `environ` run printed the full environment list. This shows `execve()` only provides environment variables if they are specifically passed.
 
 ---
 
