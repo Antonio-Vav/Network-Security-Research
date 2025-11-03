@@ -47,7 +47,7 @@ and expected some enviroment variables to be missing due to the set-UID process.
 
 ## Task 6 – PATH Hijacking Vulnerability
 ![Task 6 Screenshot](images/images/6.png)  
-I created a malicious `ls` script in a user-controlled directory, prepended it to `PATH`, and executed a vulnerable Set-UID program that invoked `system("ls")`. The malicious script ran instead of the system `ls`, demonstrating a classic PATH-hijack. This proves privileged programs must use absolute paths or sanitize the environment.
+I created a malicious script in a user-controlled directory directed it to PATH and executed a vulnerable Set-UID program that invoked `system("ls")`. The malicious script ran instead of the system `ls`, demonstrating a classic PATH-hijack. This proves just how dangerous using system calls in scripts can be.
 
 ---
 
