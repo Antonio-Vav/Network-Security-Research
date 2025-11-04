@@ -47,13 +47,13 @@ and expected some enviroment variables to be missing due to the set-UID process.
 
 ## Task 6 – PATH Hijacking Vulnerability
 ![Task 6 Screenshot](images/images/6.png)  
-I created a malicious script in a user-controlled directory directed it to PATH and executed a vulnerable Set-UID program that invoked `system("ls")`. The malicious script ran instead of the system `ls`, demonstrating a classic PATH-hijack. This proves just how dangerous using system calls in scripts can be.
+I created a malicious script in a user controlled directory and directed it to PATH, then I executed a vulnerable Set-UID program that invoked `system("ls")`. The malicious script ran instead of the system `ls`, demonstrating a classic PATH-hijack. This proves just how dangerous using system calls in scripts can be.
 
 ---
 
 ## Task 7 – LD_PRELOAD and Set-UID Protection
 ![Task 7 Screenshot](images/images/7.png)  
-I built a shared library to override a libc function and used `LD_PRELOAD` to inject it into a normal user program, which showed the overridden behavior. When I ran the same test against a Set-UID binary, the injection failed because the dynamic loader blocks `LD_PRELOAD` for privileged executions. This demonstrates a system protection against runtime library hijacking.
+I built a `catall` example to override a libc function and used `LD_PRELOAD` to inject it into a normal program, this showed the overridden behavior(as expected). When I ran the same test against a Set-UID binary, I was suprised to see the injection failed because the loader blocks `LD_PRELOAD` for privileged executions. This demonstrates a system protection against malicious tactics.
 
 ---
 
