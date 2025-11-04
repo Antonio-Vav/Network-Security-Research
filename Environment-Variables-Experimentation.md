@@ -67,9 +67,9 @@ I compiled a Set-UID program that calls `system("cat")` and replaced `cat` with 
 ![Task 9 Screenshot — attempt / logs](images/images/9.png)   
 I attempted a capability leak style exploit (tried to open/write /etc/zzz, drop privileges, and spawn a shell). The exploit failed I think, because of permission checks and because the kernel prevents automatic leaking of privileged descriptors under the method that I used for my attempt.
 some code I used to attempt this was:  
-`sudo touch /etc/zzz
-sudo chown root:root /etc/zzz
-sudo chmod 644 /etc/zzz`  
+`sudo touch /etc/zzz  
+sudo chown root:root /etc/zzz  
+sudo chmod 644 /etc/zzz`   
 However, once I attempted to open the shell using `./cap_leak` nothing happened.
 
 ---
