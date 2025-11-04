@@ -53,7 +53,7 @@ I created a malicious script in a user controlled directory and directed it to P
 
 ## Task 7 – LD_PRELOAD and Set-UID Protection
 ![Task 7 Screenshot](images/images/7.png)  
-I built a `catall` example to override a libc function and used `LD_PRELOAD` to inject it into a normal program, this showed the overridden behavior(as expected). When I ran the same test against a Set-UID binary, I was suprised to see the injection failed because the loader blocks `LD_PRELOAD` for privileged executions. This demonstrates a system protection against malicious tactics.
+I compiled a shared object to override a libc function and used `LD_PRELOAD` to inject it into a normal program, this showed the overridden behavior(as expected). When I ran the same test against a Set-UID binary, I was suprised to see the injection failed because the loader blocks `LD_PRELOAD` for privileged executions. This demonstrates a system protection against malicious tactics.
 
 ---
 
