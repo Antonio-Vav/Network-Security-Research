@@ -59,7 +59,7 @@ I compiled a shared object to override a libc function and used `LD_PRELOAD` to 
 
 ## Task 8 – system() vs execve()
 ![Task 8 Screenshot](images/images/8.png)  
-I compiled a Set-UID program that calls `system("cat ...")`, replaced `cat` with a malicious script via `PATH`, and observed the malicious script execute. The result demonstrates that `system()` trusts the environment unless it is explicitly cleared, so privileged code should avoid shell invocation or use absolute paths. This highlights an easy route to command hijacking in insecure programs.
+I compiled a Set-UID program that calls `system("cat")` and replaced `cat` with a malicious script by using `PATH`, I then watched the malicious script run. The result demonstrates that `system()` trusts the environment unless it is specifically stated otherwise, so privileged code should avoid shell use or rely on absolute paths. This highlights a very dangerous vulnerability with the system function, I suggest staying away from it at all costs if you value security.
 
 ---
 
